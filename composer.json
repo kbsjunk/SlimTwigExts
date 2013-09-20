@@ -1,0 +1,11 @@
+{
+    "name": "kitbs/SlimTwigExts",
+    "type": "library",
+    "description": "Slim Twig view extensions",
+    "require": {
+        "slim/slim": ">=2.0.0"
+    },
+    "autoload": {
+        "classmap": ["SlimTwigExts.php"]
+    }
+}
