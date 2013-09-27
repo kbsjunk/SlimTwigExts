@@ -15,6 +15,7 @@ class SlimTwigExts extends \Twig_Extension
 			'urlActive' => new \Twig_Function_Method($this, 'urlActive', array('is_safe' => array('html'))),
 			'truncTag' => new \Twig_Function_Method($this, 'truncTag', array('is_safe' => array('html'))),
 			'getColumns' => new \Twig_Function_Method($this, 'getColumns'),
+			'testSite' => new \Twig_Function_Method($this, 'testSite'),
 			'logSpan' => new \Twig_Function_Method($this, 'logSpan', array('is_safe' => array('html'))),
 			'unHTML' => new \Twig_Function_Method($this, 'unHTML', array('is_safe' => array('html'))),
 			);
@@ -47,6 +48,10 @@ class SlimTwigExts extends \Twig_Extension
 		}
 
 		return '<span class="'.$class.'">' . $logLine . '</span>';
+	}
+
+	public function testSite() {
+		return TESTSITE;
 	}
 
 	public function unHTML($html, $appName = 'default') {
